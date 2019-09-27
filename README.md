@@ -20,7 +20,7 @@ a **manager** and their dependencies.
 
 In order to run this image you will need the following prerequisites:
  - Elasticsearch ```5.x``` 
- - PostgreSql ```9.x``` or MySql ```5.x```
+ - PostgreSql ```9.x+``` or MySql ```5.x```
  - Keycloak ```6.x``` - To prepare the keycloak server please import the **apiman**
  realm file into your server ([apiman-realm-export.json](apiman-realm-export.json)). 
  After importing the apiman realm, don't forget to regenerate the secret for the
@@ -64,7 +64,7 @@ services:
 Don't forget to adjust the **environment variables** according to your setup.
 
 ### Environment Variables
-In order to run this image you will need **elasticsearch 5.x**, **postgresql 9.x** and **keycloak 6.x**.
+In order to run this image you will need **elasticsearch 5.x**, **postgresql 9.x+/mysql 5.x** and **keycloak 6.x**.
 You can configure these using the following environment variables:
  - ```APIMAN_ES_PROTOCOL``` - The protocol used to communicate with the elasticsearch service. e.g.```http```
  - ```APIMAN_ES_HOST``` - The host of the elasticsearch service. e.g.```localhost```
