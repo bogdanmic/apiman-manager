@@ -20,7 +20,7 @@ a **manager** and their dependencies.
 
 In order to run this image you will need the following prerequisites:
  - Elasticsearch ```5.x``` 
- - PostgreSql ```9.x``` 
+ - PostgreSql ```9.x``` or MySql ```5.x```
  - Keycloak ```6.x``` - To prepare the keycloak server please import the **apiman**
  realm file into your server ([apiman-realm-export.json](apiman-realm-export.json)). 
  After importing the apiman realm, don't forget to regenerate the secret for the
@@ -50,7 +50,7 @@ services:
       APIMAN_AUTH_SERVER_URL: http://keycoak.host:8080/auth
       APIMAN_AUTH_MANAGER_SECRET: keycloak-apiman-secret
       APIMAN_AUTH_UI_SECRET: keycloak-apimanui-secret
-      APIMAN_HIBERNATE_DIALECT: apiman-hibernate-dalect
+      APIMAN_HIBERNATE_DIALECT: apiman-hibernate-dialect
       APIMAN_DB_CONNECTION_URL: db-connection-string
       APIMAN_DB_USER_NAME: db-user-name
       APIMAN_DB_PASSWORD: db-user-password
@@ -77,3 +77,10 @@ You can configure these using the following environment variables:
  - ```APIMAN_AUTH_UI_SECRET``` - The  gateway secret used for authentication by the gateway with the keycloak server.
  You can find this out from the **apiman** realm and the **apimanui** client. Bear in mind that this is not needed
  if your client is public.
+ - ```APIMAN_HIBERNATE_DIALECT``` - The hibernate dialect to be used to communicate with the database.
+ Possible values: ```io.apiman.manager.api.jpa.ApimanPostgreSQLDialect```, ```io.apiman.manager.api.jpa.ApimanMySQL5Dialect```
+ - ```APIMAN_DB_CONNECTION_URL``` - The database connection string that the apiman manager will use to connect to.
+ e.g. ```jdbc:postgresql://localhost:5432/apiman_db```
+ - ```APIMAN_DB_USER_NAME``` - The username to access the database e.g.```postgres```
+ - ```APIMAN_DB_PASSWORD``` - The password to access the database e.g.```postgres```
+ - ```APIMAN_DB_VENDOR``` - The driver to use to connect to the database. Possible values: ```postgres```, ```mysql```

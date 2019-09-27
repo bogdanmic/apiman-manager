@@ -17,7 +17,7 @@ services:
       APIMAN_AUTH_SERVER_URL: http://keycoak.host:8080/auth
       APIMAN_AUTH_MANAGER_SECRET: keycloak-apiman-secret
       APIMAN_AUTH_UI_SECRET: keycloak-apimanui-secret
-      APIMAN_HIBERNATE_DIALECT: apiman-hibernate-dalect
+      APIMAN_HIBERNATE_DIALECT: apiman-hibernate-dialect
       APIMAN_DB_CONNECTION_URL: db-connection-string
       APIMAN_DB_USER_NAME: db-user-name
       APIMAN_DB_PASSWORD: db-user-password
