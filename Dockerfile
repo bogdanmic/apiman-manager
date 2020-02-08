@@ -12,7 +12,7 @@ RUN cd $HOME/wildfly \
     && rm -rf $HOME/wildfly/standalone/deployments/apiman-gateway-api.war \
     && rm -rf $HOME/wildfly/standalone/deployments/apiman-gateway.war \
     && curl -o ${JBOSS_HOME}/standalone/deployments/postgresql.jar https://repo1.maven.org/maven2/org/postgresql/postgresql/9.4-1206-jdbc41/postgresql-9.4-1206-jdbc41.jar \
-    && curl -o ${JBOSS_HOME}/standalone/deployments/mysql.jar https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.33/mysql-connector-java-5.1.33.jar
+    && curl -o ${JBOSS_HOME}/standalone/deployments/mysql.jar https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.33/mysql-connector-java-5.1.33.jar \
     && rm ${JBOSS_HOME}/standalone/deployments/apiman-ds.xml
 
 # Add our custom config files. These are a bit cleaned up version of the ones available in the apiman-distro-wildfly11-$APIMAN_VERSION-overlay.zip
