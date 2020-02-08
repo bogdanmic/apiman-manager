@@ -3,7 +3,8 @@ The manager component of the [Apiman](http://www.apiman.io/) - Open Source API M
 This image was build as described in the [official documentation](http://www.apiman.io/latest/production-guide.html).
 
 ### Available tags
- - on wildfly11: ```1.5.1```, ```latest```
+ - on wildfly11: ```1.5.5```, ```latest```
+ - on wildfly11: ```1.5.1```
 
 ## What is [Apiman](http://www.apiman.io/)?
 From Apiman website:
